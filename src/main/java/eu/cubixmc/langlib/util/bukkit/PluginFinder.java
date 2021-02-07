@@ -1,4 +1,4 @@
-package fr.mrcubee.langlib.util.bukkit;
+package eu.cubixmc.langlib.util.bukkit;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  * @version 1.0
  * @since 1.0
  */
-public class PluginFinder extends fr.mrcubee.langlib.util.PluginFinder {
+public class PluginFinder extends eu.cubixmc.langlib.util.PluginFinder {
 
     @Override
     public Object findPlugin() {

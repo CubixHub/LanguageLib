@@ -1,4 +1,4 @@
-package fr.mrcubee.langlib.util;
+package eu.cubixmc.langlib.util;
 
 import java.io.File;
 import java.util.logging.Logger;
@@ -56,9 +56,9 @@ public abstract class PluginFinder {
      */
     private static PluginFinder getFinder() {
         if (getClass("org.bukkit.plugin.Plugin") != null)
-            return new fr.mrcubee.langlib.util.bukkit.PluginFinder();
+            return new eu.cubixmc.langlib.util.bukkit.PluginFinder();
         else if (getClass("net.md_5.bungee.api.plugin.Plugin") != null)
-            return new fr.mrcubee.langlib.util.bungeecord.PluginFinder();
+            return new eu.cubixmc.langlib.util.bungeecord.PluginFinder();
         return new PluginFinder() {
             @Override
             public Object findPlugin() {

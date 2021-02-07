@@ -1,4 +1,4 @@
-package fr.mrcubee.langlib.util.bungeecord;
+package eu.cubixmc.langlib.util.bungeecord;
 
 import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  * @version 1.0
  * @since 1.0
  */
-public class PluginFinder extends fr.mrcubee.langlib.util.PluginFinder {
+public class PluginFinder extends eu.cubixmc.langlib.util.PluginFinder {
 
     @Override
     public Object findPlugin() {

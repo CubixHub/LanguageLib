@@ -1,4 +1,4 @@
-package fr.mrcubee.langlib;
+package eu.cubixmc.langlib;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
