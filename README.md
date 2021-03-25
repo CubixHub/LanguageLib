@@ -22,7 +22,7 @@ Dependency:
   <dependency>
     <groupId>eu.cubixmc.library</groupId>
     <artifactId>languagelib</artifactId>
-    <version>1.0</version>
+    <version>%VERSION%</version>
   </dependency>
 </dependencies>
 ```
@@ -31,14 +31,14 @@ Repository:
 ```groovy
 repositories {
     maven {
-        url "http://nexus.mrcubee.net/repository/minecraft/"
+        url "https://maven.pkg.github.com/CubixHub/LanguageLib"
     }
 }
 ```
 Dependency:
 ```groovy
 dependencies {
-    implementation 'fr.mrcubee.minecraft.library:languagelib:1.0'
+    implementation 'eu.cubixmc.library:languagelib:%VERSION%'
 }
 ```
 ### Use in the plugin.
