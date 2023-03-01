@@ -23,7 +23,7 @@ public class Lang {
      * @since 1.0
      * @param original The message format returned by the language dictionary.
      * @param rescueMessage message format used if no dictionary contains the unique message identifier.
-     * @param color Applies the color format from '&' character.
+     * @param color Applies the color format from character.
      * @param objects The elements required by the message format.
      * @return The formatted message.
      * @see String#format(String, Object...)
@@ -47,7 +47,7 @@ public class Lang {
      * @param lang The targeted language (see minecraft <a href="https://minecraft.gamepedia.com/Language">Locale Code</a>).
      * @param messageId The unique identifier of the message to use to find the message format in the dictionary.
      * @param rescueMessage Message format used if no dictionary contains the unique message identifier.
-     * @param color Applies the color format from '&' character.
+     * @param color Applies the color format from character.
      * @param objects The elements required by the message format.
      * @return The formatted message.
      * @see String#format(String, Object...)
@@ -158,7 +158,7 @@ public class Lang {
      * @param player The player language to retrieve.
      * @param messageId The unique identifier of the message to use to find the message format in the dictionary.
      * @param rescueMessage Message format used if no dictionary contains the unique message identifier.
-     * @param color Applies the color format from '&' character.
+     * @param color Applies the color format from character.
      * @param objects The elements required by the message format.
      * @return The formatted message.
      * @see String#format(String, Object...)
@@ -171,7 +171,7 @@ public class Lang {
      * @since 1.0
      * @param messageId The unique identifier of the message to use to find the message format in the dictionary.
      * @param rescueMessage Message format used if no dictionary contains the unique message identifier.
-     * @param color Applies the color format from '&' character.
+     * @param color Applies the color format from character.
      * @param objects The elements required by the message format.
      * @return The formatted message.
      * @see String#format(String, Object...) 
