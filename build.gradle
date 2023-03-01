@@ -13,7 +13,7 @@ repositories {
     mavenLocal()
 
     maven {
-        url = uri('https://maven.pkg.github.com/CubixHub/LanguageLib')
+        url = uri('https://maven.pkg.github.com/CubixMCDev/LanguageLib')
     }
 
     maven {
@@ -46,7 +46,7 @@ publishing {
     repositories {
         maven {
             name = "CubixMCDev"
-            url = "https://maven.pkg.github.com/CubixHub/LanguageLib"
+            url = "https://maven.pkg.github.com/CubixMCDev/LanguageLib"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
