@@ -1,0 +1,56 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'java'
+}
+
+group = 'cubixmc.com'
+version = '1.0.1'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenLocal()
+
+    maven {
+        url = uri('https://maven.pkg.github.com/CubixHub/LanguageLib')
+    }
+
+    maven {
+        name 'spigotmc-repo'
+        url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+
+    maven {
+        name 'bungeecord-repo'
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+
+    maven {
+        url "https://repo.codemc.io/repository/maven-public/"
+    }
+
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    compileOnly 'net.md-5:bungeecord-api:1.16-R0.4-SNAPSHOT'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}
