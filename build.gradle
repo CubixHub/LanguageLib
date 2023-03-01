@@ -45,7 +45,7 @@ java {
 publishing {
     repositories {
         maven {
-            name = "GitHubPackages"
+            name = "CubixMCDev"
             url = "https://maven.pkg.github.com/CubixHub/LanguageLib"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
