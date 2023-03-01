@@ -7,6 +7,7 @@ plugins {
 group = 'eu.cubixmc.library'
 version = '1.0.1'
 sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 repositories {
     mavenLocal()
@@ -33,6 +34,12 @@ repositories {
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
     compileOnly 'net.md-5:bungeecord-api:1.19-R0.1-SNAPSHOT'
+    implementation 'com.google.guava:guava:29.0-jre'
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
 }
 
 publishing {
