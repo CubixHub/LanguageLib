@@ -1,6 +1,6 @@
 package eu.cubixmc.langlib.util.bungeecord;
 
-import net.md_5.bungee.BungeeCord;
+import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 
 import java.io.File;
@@ -27,7 +27,7 @@ public class PluginFinder extends eu.cubixmc.langlib.util.PluginFinder {
         if (clazz == null)
             return null;
         hashSourceCode = clazz.getProtectionDomain().getCodeSource().hashCode();
-        for (Plugin plugin : BungeeCord.getInstance().getPluginManager().getPlugins())
+        for (Plugin plugin : ProxyServer.getInstance().getPluginManager().getPlugins())
             if (plugin.getClass().getProtectionDomain().getCodeSource().hashCode() == hashSourceCode)
                 return plugin;
         return null;
