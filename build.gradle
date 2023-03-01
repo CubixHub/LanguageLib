@@ -40,12 +40,23 @@ dependencies {
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "CubixMCDev"
+            url = "https://github.com/CubixMCDev/LanguageLib"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
     publications {
         maven(MavenPublication) {
             from(components.java)
         }
     }
 }
+
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
