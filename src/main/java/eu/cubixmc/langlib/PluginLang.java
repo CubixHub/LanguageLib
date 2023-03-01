@@ -9,7 +9,7 @@ import java.util.WeakHashMap;
 import java.util.logging.Logger;
 
 /** Saves the plugin's configuration and languages.
- * @author MrCubee & Pipo
+ * @author MrCubee
  * @version 1.0
  * @since 1.0
  */
