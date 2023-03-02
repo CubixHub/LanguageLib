@@ -49,8 +49,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/CubixMCDev/LanguageLib")
             credentials {
-                username = project.findProperty("user") ?: System.getenv("GITHUB_ACTOR")
-                password = project.findProperty("token") ?: System.getenv("GITHUB_TOKEN")
+                username = project.findProperty("user") ?: System.getenv("USERNAME")
+                password = project.findProperty("token") ?: System.getenv("TOKEN")
             }
         }
     }
