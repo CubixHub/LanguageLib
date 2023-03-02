@@ -1,4 +1,4 @@
-package eu.cubixmc.languagelib;
+package com.cubixmc.languagelib;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
