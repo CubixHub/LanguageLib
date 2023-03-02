@@ -4,8 +4,8 @@ plugins {
     id 'java'
 }
 
-group = 'eu.cubixmc'
-version = '1.0'
+group = 'com.cubixmc'
+version = '1.0.1'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
@@ -35,7 +35,6 @@ repositories {
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
     compileOnly 'net.md-5:bungeecord-api:1.19-R0.1-SNAPSHOT'
-    implementation 'com.google.guava:guava:29.0-jre'
 }
 
 java {
@@ -49,8 +48,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/CubixMCDev/LanguageLib")
             credentials {
-                username = "CubixMCDev"
-                password = System.getenv("GITHUB_TOKEN")
+                username = project.findProperty("user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("token") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
