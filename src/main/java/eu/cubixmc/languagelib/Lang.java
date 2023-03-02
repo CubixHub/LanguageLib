@@ -1,6 +1,6 @@
-package eu.cubixmc.langlib;
+package eu.cubixmc.languagelib;
 
-import eu.cubixmc.langlib.util.PluginFinder;
+import eu.cubixmc.languagelib.util.PluginFinder;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
 

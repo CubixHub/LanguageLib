@@ -1,17 +1,17 @@
-package eu.cubixmc.langlib.util.bukkit;
+package eu.cubixmc.languagelib.util.bungeecord;
 
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.Plugin;
+import net.md_5.bungee.api.ProxyServer;
+import net.md_5.bungee.api.plugin.Plugin;
 
 import java.io.File;
 import java.util.logging.Logger;
 
-/** This class retrieves which Spigot plugin calls the function.
+/** This class retrieves which Bungeecord plugin calls the function.
  * @author MrCubee
  * @version 1.0
  * @since 1.0
  */
-public class PluginFinder extends eu.cubixmc.langlib.util.PluginFinder {
+public class PluginFinder extends eu.cubixmc.languagelib.util.PluginFinder {
 
     @Override
     public Object findPlugin() {
@@ -19,18 +19,17 @@ public class PluginFinder extends eu.cubixmc.langlib.util.PluginFinder {
         Class<?> clazz = null;
         int hashSourceCode;
 
-        if (stackTraceElements.length < 4)
+        if (stackTraceElements.length < 5)
             return null;
         try {
-            clazz = Class.forName(stackTraceElements[3].getClassName());
+            clazz = Class.forName(stackTraceElements[4].getClassName());
         } catch (ClassNotFoundException ignored) {}
         if (clazz == null)
             return null;
         hashSourceCode = clazz.getProtectionDomain().getCodeSource().hashCode();
-        for (Plugin plugin : Bukkit.getPluginManager().getPlugins()) {
+        for (Plugin plugin : ProxyServer.getInstance().getPluginManager().getPlugins())
             if (plugin.getClass().getProtectionDomain().getCodeSource().hashCode() == hashSourceCode)
                 return plugin;
-        }
         return null;
     }
 

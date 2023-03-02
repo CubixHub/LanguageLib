@@ -1,4 +1,4 @@
-package eu.cubixmc.langlib;
+package eu.cubixmc.languagelib;
 
 import java.util.HashMap;
 import java.util.Map;

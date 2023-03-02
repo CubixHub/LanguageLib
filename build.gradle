@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'cubixmc.com'
+group = 'eu.cubixmc'
 version = '1.0'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
