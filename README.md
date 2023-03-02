@@ -11,8 +11,8 @@ Repository:
 ```xml
 <repositories>
     <repository>
-        <id>cubix-git</id>
-        <url>https://maven.pkg.github.com/CubixHub/LanguageLib</url>
+        <id>languagelib</id>
+        <url>https://maven.pkg.github.com/CubixMCDev/LanguageLib</url>
     </repository>
 </repositories>
 ```
@@ -20,7 +20,7 @@ Dependency:
 ```xml
 <dependencies>
   <dependency>
-    <groupId>eu.cubixmc.library</groupId>
+    <groupId>com.cubixmc</groupId>
     <artifactId>languagelib</artifactId>
     <version>%VERSION%</version>
   </dependency>
@@ -31,14 +31,14 @@ Repository:
 ```groovy
 repositories {
     maven {
-        url "https://maven.pkg.github.com/CubixHub/LanguageLib"
+        url "https://maven.pkg.github.com/CubixMCDev/LanguageLib"
     }
 }
 ```
 Dependency:
 ```groovy
 dependencies {
-    implementation 'eu.cubixmc.library:languagelib:%VERSION%'
+    implementation 'com.cubixmc:languagelib:%VERSION%'
 }
 ```
 ### Use in the plugin.
